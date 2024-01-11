@@ -1,0 +1,9 @@
+kubectl get pods -o wide
+
+-- ingreso a pod utilitario busybox
+
+kubectl exec -it busybox-fortest-pod sh
+
+curl http://192.168.1.5:8080/api/personas/2
+
+curl http://172.21.0.195:80/api/personas/3

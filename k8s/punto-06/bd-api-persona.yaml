@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: bdd-api-persona
+  namespace: name1
+  labels:
+    app: bdd-api-persona-pod 
+spec:
+  containers:
+    - name: mariadb-container
+      image: georgevillanew/bdd-api-persona:1.0.0
+      envFrom:
+        - configMapRef:
+            name: configmap-bdd
+      ports:
+        - containerPort: 3306  
