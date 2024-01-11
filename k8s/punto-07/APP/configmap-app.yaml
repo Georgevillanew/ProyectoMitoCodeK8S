@@ -1,9 +1,0 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: configmap-apipersona
-  namespace: name2
-data:
-  host: mysql
-  port: "3306"
-  password: ""
